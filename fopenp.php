@@ -10,5 +10,5 @@ function fopenp($path, $options = 'w') {
     if (!is_dir($dirname)) {
         mkdir($dirname, 0755, true);
     }
-    return fopen($path, $options) or die("Unable to open file $path!");
+    return fopen($path, $options);
 }

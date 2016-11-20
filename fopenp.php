@@ -5,10 +5,10 @@
  * @param {string} path
  * @return {resource}
  */
-function fopenp($path) {
+function fopenp($path, $options = 'w') {
     $dirname = dirname($path);
     if (!is_dir($dirname)) {
         mkdir($dirname, 0755, true);
     }
-    return fopen($path, 'w') or die("Unable to open file $path!");
+    return fopen($path, $options) or die("Unable to open file $path!");
 }
